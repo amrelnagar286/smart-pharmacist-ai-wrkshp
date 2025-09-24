@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>الصيدلي الذكي في عصر الذكاء الاصطناعي - التعريف الشامل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-violet: #7C3AED;
+            --deep-violet: #5B21B6;
+            --accent-blue: #3B82F6;
+            --accent-teal: #14B8A6;
+            --accent-amber: #F59E0B;
+            --accent-red: #EF4444;
+            --accent-green: #22C55E;
+            --bg-white: #FFFFFF;
+            --bg-offwhite: #F8FAFC;
+            --bg-lavender: #F5F3FF;
+            --text-light: #FFFFFF;
+            --text-dark: #1F2937;
+            --text-subtle: #4B5563;
+            --border-light: #E5E7EB;
+            --shadow-primary: rgba(124, 58, 237, 0.15);
+            --font-primary: 'IBM Plex Sans Arabic', sans-serif;
+            --font-secondary: 'Cairo', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, #F8FAFC 0%, #E5E7EB 100%);
+            color: var(--text-dark);
+            line-height: 1.8;
+            direction: rtl;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--deep-violet) 0%, var(--primary-violet) 100%);
+            border-radius: 24px;
+            padding: 60px;
+            color: var(--text-light);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 40px rgba(91, 33, 182, 0.2);
+            min-width: 1200px !important;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+
+        .hero-title {
+            font-family: var(--font-secondary);
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 28px;
+            font-weight: 500;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+            min-width: 1200px !important;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--primary-violet);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+        }
+
+        .card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .card-icon {
+            font-size: 48px;
+            color: var(--primary-violet);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card-title {
+            font-family: var(--font-secondary);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--deep-violet);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card-content {
+            font-size: 18px;
+            color: var(--text-subtle);
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .card-content p {
+            text-align: center;
+        }
+
+        .card-content ul {
+            list-style: none;
+            padding-right: 0;
+            margin-top: 15px;
+        }
+
+        .card-content li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .card-content li::before {
+            content: '•';
+            position: absolute;
+            right: 0;
+            color: var(--primary-violet);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .stats-section {
+            background: var(--bg-lavender);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            min-width: 1200px !important;
+        }
+
+        .stats-title {
+            font-family: var(--font-secondary);
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--deep-violet);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-secondary);
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--primary-violet);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: var(--text-subtle);
+            font-weight: 500;
+        }
+
+        .timeline-section {
+            margin-bottom: 50px;
+            min-width: 1200px !important;
+        }
+
+        .timeline-title {
+            font-family: var(--font-secondary);
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--deep-violet);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            right: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary-violet);
+            transform: translateX(50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 100%;
+            padding: 0 40px 0 40px;
+            text-align: center;
+        }
+
+        .timeline-content {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.3);
+            border-color: var(--primary-violet);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            right: 50%;
+            top: -15px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid var(--bg-white);
+            transform: translateX(50%);
+        }
+
+        .timeline-title-small {
+            font-family: var(--font-secondary);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--deep-violet);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .timeline-content p {
+            text-align: center;
+            margin: 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+            gap: 30px;
+            margin-bottom: 50px;
+            min-width: 1200px !important;
+        }
+
+        @media (max-width: 1200px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary-violet);
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 64px;
+            color: var(--primary-violet);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-family: var(--font-secondary);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--deep-violet);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .feature-description {
+            font-size: 16px;
+            color: var(--text-subtle);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .centered-card {
+            grid-column: 2 / 4;
+            justify-self: center;
+        }
+
+        /* Specific centering for the two requested cards */
+        .features-grid div:nth-child(5) {
+            grid-column: 2 / 4;
+            justify-self: center;
+        }
+
+        .features-grid div:nth-child(6) {
+            grid-column: 2 / 4;
+            justify-self: center;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-violet) 100%);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+            min-width: 1200px !important;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 10s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-30px, -30px) rotate(180deg); }
+        }
+
+        .cta-title {
+            font-family: var(--font-secondary);
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .cta-subtitle {
+            font-size: 24px;
+            font-weight: 500;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--text-light);
+            color: var(--primary-violet);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 42px;
+            }
+            
+            .hero-subtitle {
+                font-size: 20px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                right: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-right: 60px;
+                padding-left: 20px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                padding-right: 60px;
+                padding-left: 20px;
+            }
+            
+            .timeline-dot {
+                right: 20px;
+            }
+        }
+
+        .stat-label {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">الصيدلي الذكي في عصر الذكاء الاصطناعي</h1>
+            <p class="hero-subtitle">محاضرة استراتيجية شاملة .. <br> لتمكين طلاب الصيدلة في الأردن من قيادة التحول الرقمي في مهنة الصيدلة ..</p>
+            <span class="hero-badge"><i class="fas fa-graduation-cap"></i> للطلاب من 5 جامعات أردنية</span>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <div class="card">
+                <i class="fas fa-bullseye card-icon"></i>
+                <h3 class="card-title">التعريف بالمحاضرة</h3>
+                <div class="card-content">
+                    <p>محاضرة استراتيجية شاملة تهدف إلى تمكين طلاب الصيدلة في الأردن من فهم وتوظيف الذكاء الاصطناعي في ممارستهم المهنية المستقبلية. تجمع بين الأسس النظرية والتطبيقات العملية في السياق الصيدلاني الأردني.</p>
+                    <ul>
+                        <li>محتوى مصمم خصيصاً للسياق الأردني</li>
+                        <li>منهجية تفاعلية تجمع بين النظرية والتطبيق</li>
+                        <li>تغطية شاملة من الأساسيات إلى التطبيقات المتقدمة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-target card-icon"></i>
+                <h3 class="card-title">الأهداف الاستراتيجية</h3>
+                <div class="card-content">
+                    <p>تهدف المحاضرة إلى تحويل الطلاب من مستهلكين سلبيين للمعلومات إلى مهندسين نشطين لعملية التعلم والممارسة المهنية باستخدام الذكاء الاصطناعي.</p>
+                    <ul>
+                        <li>تأسيس الفهم العميق لمفاهيم الذكاء الاصطناعي</li>
+                        <li>تطوير المهارات العملية في استخدام الأدوات الذكية</li>
+                        <li>بناء الوعي النقدي للتقييم الآمن للتكنولوجيا</li>
+                        <li>تهيئة الطلاب لمهنة الصيدلة المستقبلية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-users card-icon"></i>
+                <h3 class="card-title">الفئة المستهدفة</h3>
+                <div class="card-content">
+                    <p>طلاب الصيدلة في خمس جامعات أردنية رئيسية، مع تصميم المحتوى ليناسب مستويات مختلفة من الوعي التكنولوجي.</p>
+                    <ul>
+                        <li>جامعة مؤتة، جامعة العلوم والتكنولوجيا</li>
+                        <li>الجامعة الهاشمية، جامعة اليرموك</li>
+                        <li>جامعة الزيتونة</li>
+                        <li>90% من الحضور يتعرضدون للمفاهيم لأول مرة</li>
+                        <li>2-5% طلاب واعين ومتقدمين</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <h2 class="stats-title">لماذا هذه المحاضرة مهمة الآن؟</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">73%</span>
+                    <span class="stat-label">من الجامعات الأردنية تفتقر لمناهج الذكاء الاصطناعي في الصيدلة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">120M$</span>
+                    <span class="stat-label">توفير محتمل سنوياً في القطاع الصحي الأردني عبر الذكاء الاصطناعي</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">68%</span>
+                    <span class="stat-label">من الأردنيين يحصلون على الرعاية الصحية الأولى من الصيدليات</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2030</span>
+                    <span class="stat-label">العام الذي سيكون فيه الذكاء الاصطناعي جزءاً أساسياً من ممارسة الصيدلة</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <h2 class="timeline-title">المحاور الرئيسية للمحاضرة</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title-small">الأسس الاستراتيجية</h3>
+                        <p>لماذا الذكاء الاصطناعي مهم الآن للصيادلة الأردنيين؟ التحديات والفرص في السياق الأردني.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title-small">فك الشفرة</h3>
+                        <p>ما هو الذكاء الاصطناعي وأنواعه المختلفة؟ النماذج اللغوية الكبيرة (LLMs) وعلاقتها بالصيدلة.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title-small">الاستخدام العملي</h3>
+                        <p>كيفية توظيف الذكاء الاصطناعي كأداة فعالة في الدراسة والممارسة المهنية مع أمثلة عملية.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title-small">الجانب المظلم</h3>
+                        <p>المخاطر والتحديات الأخلاقية والقانونية لاستخدام الذكاء الاصطناعي في الممارسة الصيدلانية.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title-small">مستقبل المهنة</h3>
+                        <p>كيف سيغير الذكاء الاصطناعي مهنة الصيدلة؟ الفرص الجديدة والمهارات المطلوبة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-map-marked-alt feature-icon"></i>
+                <h3 class="feature-title">السياق الأردني المخصص</h3>
+                <p class="feature-description">تصميم المحتوى ليناسب التحديات والفرص الخاصة بالسياق الصحي والأكاديمي في الأردن، مع أمثلة واقعية من البيئة المحلية.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-balance-scale feature-icon"></i>
+                <h3 class="feature-title">التوازن بين النظرية والتطبيق</h3>
+                <p class="feature-description">الجمع بين المفاهيم النظرية والتطبيقات العملية مع دراسات حالة وعروض توضيحية حية تعزز الفهم والتطبيق.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users-cog feature-icon"></i>
+                <h3 class="feature-title">المنهجية التفاعلية</h3>
+                <p class="feature-description">استخدام أساليب تعليمية متطورة تشمل الأنشطة التفاعلية والمناقشات الجماعية والمشاريع العملية.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-rocket feature-icon"></i>
+                <h3 class="feature-title">الشمولية والتكامل</h3>
+                <p class="feature-description">تغطية جميع جوانب الموضوع من الأساسيات إلى التطبيقات المتقدمة والمستقبلية في رحلة تعليمية متكاملة.</p>
+            </div>
+            <div class="feature-card centered-card">
+                <i class="fas fa-heart feature-icon"></i>
+                <h3 class="feature-title">التركيز على المجتمع</h3>
+                <p class="feature-description">التأكيد على دور الصيادلة في المجتمع وكيف يمكن للذكاء الاصطناعي تعزيز هذا الدور وتحسين الرعاية الصحية.</p>
+            </div>
+            <div class="feature-card centered-card">
+                <i class="fas fa-chart-line feature-icon"></i>
+                <h3 class="feature-title">النتائج الملموسة</h3>
+                <p class="feature-description">تزويد الطلاب بمهارات قابلة للتطبيق فوراً في دراستهم وحياتهم المهنية مع خارطة طريق واضحة للتطور المستمر.</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2 class="cta-title">كن جزءاً من ثورة الصيدلة الذكية</h2>
+            <p class="cta-subtitle">انضم إلينا في رحلة تحويلية ستمكنك من قيادة مستقبل مهنة الصيدلة في الأردن والمنطقة</p>
+            <button class="cta-button">
+                <a href="slides.html" target="_blank" style="text-decoration: none; color: inherit; display: inline-block; width: 100%; height: 100%;">
+                    <i class="fas fa-rocket"></i> ابدأ رحلتك الآن
+                </a>
+            </button>
+        </section>
+    </div>
+
+    <script>
+        // Add smooth scrolling animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card, .feature-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Add click animation to CTA button
+            const ctaButton = document.querySelector('.cta-button');
+            ctaButton.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+    </script>
+
+</body>
+</html>

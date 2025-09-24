@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>ص. عمرو النجار - الصيدلي الذكي في عصر الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-violet: #7C3AED;
+            --action-blue: #3B82F6;
+            --emerald-green: #10B981;
+            --amber-orange: #F59E0B;
+            --rose-red: #F43F5E;
+            --background-color: #FFFFFF;
+            --soft-lavender: #F5F3FF;
+            --light-text: #FFFFFF;
+            --dark-text: #1F2937;
+            --subtle-text: #4B5563;
+            --border-color: #E5E7EB;
+            --shadow-color: rgba(99, 102, 241, 0.1);
+            --font-family: 'IBM Plex Sans Arabic', sans-serif;
+            --font-literary: 'Amiri', serif;
+            --font-modern: 'Cairo', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E5E7EB 100%);
+            color: var(--dark-text);
+            line-height: 1.8;
+            overflow-x: hidden;
+            min-width: 1200px !important;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-width: 1200px !important;
+            contain: layout style;
+        }
+
+        /* Hero Section with Personal Touch */
+        .hero-section {
+            background: linear-gradient(135deg, #5b21b6 0%, var(--deep-violet) 50%, #4C1D95 100%);
+            border-radius: 24px;
+            padding: 60px 60px;
+            color: var(--light-text);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 60px;
+            box-shadow: 0 25px 50px rgba(91, 33, 182, 0.3);
+            contain: layout style;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 8px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-name {
+            font-family: var(--font-modern);
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .profile-title {
+            font-size: 20px;
+            opacity: 0.9;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .hero-text {
+            padding-right: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-greeting {
+            font-family: var(--font-literary);
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #FFFFFF 0%, #E0E7FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            line-height: 1.6;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .hero-quote {
+            font-family: var(--font-literary);
+            font-size: 24px;
+            font-style: italic;
+            opacity: 0.9;
+            border-right: 4px solid rgba(255,255,255,0.3);
+            padding-right: 30px;
+            margin-right: 20px;
+            line-height: 1.4;
+        }
+
+        /* Philosophy Section */
+        .philosophy-section {
+            background: var(--background-color);
+            border-radius: 24px;
+            padding: 60px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .philosophy-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--deep-violet), var(--action-blue), var(--emerald-green));
+        }
+
+        .section-title {
+            font-family: var(--font-modern);
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--deep-violet);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--deep-violet);
+            border-radius: 2px;
+        }
+
+        .poetry-quote {
+            background: var(--soft-lavender);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .poetry-quote::before,
+        .poetry-quote::after {
+            content: '"';
+            font-family: var(--font-literary);
+            font-size: 120px;
+            position: absolute;
+            color: var(--deep-violet);
+            opacity: 0.1;
+            line-height: 1;
+        }
+
+        .poetry-quote::before {
+            top: 20px;
+            right: 30px;
+        }
+
+        .poetry-quote::after {
+            bottom: 0;
+            left: 30px;
+        }
+
+        .poetry-text {
+            font-family: var(--font-literary);
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--deep-violet);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .poetry-author {
+            font-size: 24px;
+            color: var(--subtle-text);
+            font-weight: 500;
+        }
+
+        .philosophy-explanation {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .philosophy-card {
+            background: var(--background-color);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .philosophy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--deep-violet);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .philosophy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+            border-color: var(--deep-violet);
+        }
+
+        .philosophy-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .philosophy-icon {
+            font-size: 48px;
+            color: var(--deep-violet);
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+        }
+
+        .philosophy-title {
+            font-family: var(--font-modern);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--deep-violet);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .philosophy-description {
+            font-size: 18px;
+            color: var(--subtle-text);
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* Journey Section */
+        .journey-section {
+            background: linear-gradient(135deg, var(--soft-lavender) 0%, #EDE9FE 100%);
+            border-radius: 24px;
+            padding: 60px;
+            margin-bottom: 60px;
+        }
+
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .journey-card {
+            background: var(--background-color);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .journey-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--deep-violet), var(--action-blue));
+        }
+
+        .journey-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(124, 58, 237, 0.25);
+        }
+
+        .journey-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .journey-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--deep-violet), var(--action-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 25px;
+            flex-shrink: 0;
+        }
+
+        .journey-icon i {
+            font-size: 40px;
+            color: var(--light-text);
+        }
+
+        .journey-title {
+            font-family: var(--font-modern);
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--deep-violet);
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .journey-description {
+            font-size: 18px;
+            color: var(--subtle-text);
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .highlight {
+            color: var(--deep-violet);
+            font-weight: 700;
+            background: rgba(124, 58, 237, 0.1);
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background: var(--background-color);
+            border-radius: 24px;
+            padding: 60px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .skill-badge {
+            background: linear-gradient(135deg, var(--soft-lavender), #EDE9FE);
+            border: 2px solid transparent;
+            border-radius: 15px;
+            padding: 20px 25px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--deep-violet);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .skill-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-5px);
+            border-color: var(--deep-violet);
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.2);
+        }
+
+        .skill-badge:hover::before {
+            left: 100%;
+        }
+
+        .why-section {
+            background: var(--background-color);
+            border-radius: 24px;
+            padding: 60px;
+            color: var(--dark-text);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .why-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--deep-violet), var(--action-blue));
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-card {
+            background: var(--background-color);
+            border-radius: 20px;
+            padding: 40px;
+            border: 2px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            will-change: transform;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+            border-color: var(--deep-violet);
+        }
+
+        .why-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+            color: var(--deep-violet);
+            text-align: center;
+        }
+
+        .why-title {
+            font-family: var(--font-modern);
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .why-description {
+            font-size: 18px;
+            line-height: 1.8;
+            opacity: 0.95;
+            text-align: center;
+        }
+
+        /* Footer CTA */
+        .cta-section {
+            background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+            border-radius: 24px;
+            padding: 80px 60px;
+            text-align: center;
+            color: var(--light-text);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.03);
+            opacity: 0.5;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-family: var(--font-modern);
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #E5E7EB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-subtitle {
+            font-size: 24px;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button-primary {
+            background: linear-gradient(135deg, var(--deep-violet), var(--action-blue));
+            color: var(--light-text);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: var(--light-text);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.6);
+        }
+
+        .contact-info {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .contact-item i {
+            font-size: 24px;
+            color: var(--deep-violet);
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-greeting {
+                font-size: 48px;
+            }
+
+            .hero-subtitle {
+                font-size: 20px;
+            }
+
+            .poetry-text {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .journey-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-title {
+                font-size: 36px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            will-change: opacity, transform;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Add centering for elements outside boxes */
+        .section-title {
+            font-family: var(--font-modern);
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--deep-violet);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .profile-title {
+            font-size: 20px;
+            opacity: 0.9;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .cta-subtitle {
+            font-size: 24px;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="profile-section">
+                    <img src="Amr.jpg" alt="ص. عمرو النجار" class="profile-image">
+                    <h2 class="profile-name">عمرو النجار</h2>
+                    <p class="profile-title">صيدلاني • مستشار رقمي • محاضر</p>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-greeting">أهلاً بكم</h1>
+                    <p class="hero-subtitle" style="margin-bottom: 15px; line-height: 1.6; text-align: center;">
+                        صيدلاني مثلكم، يجمعنا شغف مشترك نحو تطوير مهنتنا والارتقاء بها. <br>
+                        رحلتي المهنية هي مزيج بين عالمين، وهذا المزيج هو أساس محاضرتي اليوم.
+                    </p>
+                    <blockquote class="hero-quote" style="margin-top: 10px; line-height: 1.6; text-align: center;">
+                        الأدوات الرقمية والذكاء الاصطناعي هي سيوف عصرنا .. <br> لكن قيمتها الحقيقية تكمن في حكمة وبراعة من يستخدمها ..
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="philosophy-section">
+            <h2 class="section-title fade-in">فلسفتي المهنية</h2>
+            
+            <div class="poetry-quote fade-in">
+                <p class="poetry-text">
+                    "وَمَا السَّيْفُ إِلَّا بَزُّ غَادٍ لِزِينَةٍ<br>
+                    إِذَا لَمْ يَكُنْ أَمْضَى مِنَ السَّيْفِ حَامِلُه"
+                </p>
+                <p class="poetry-author">- البحتري</p>
+            </div>
+
+            <div class="philosophy-explanation">
+                <div class="philosophy-card fade-in">
+                    <i class="fas fa-fist-raised philosophy-icon"></i>
+                    <h3 class="philosophy-title">السلاح بضاربه</h3>
+                    <p class="philosophy-description">
+                        أعتقد أن التكنولوجيا والذكاء الاصطناعي هي مجرد أدوات، مثل السيف. 
+                        قيمتها الحقيقية لا تكمن في حدتها أو قوتها، بل في مهارة وحكمة 
+                        الشخص الذي يستخدمها. ورشتنا اليوم هي عن صقل "حامل السيف".
+                    </p>
+                </div>
+                <div class="philosophy-card fade-in">
+                    <i class="fas fa-balance-scale philosophy-icon"></i>
+                    <h3 class="philosophy-title">التوازن بين العلم والتكنولوجيا</h3>
+                    <p class="philosophy-description">
+                        أسعى جاهداً للحفاظ على التوازن بين الأسس العلمية الصيدلانية 
+                        والتطورات التكنولوجية، مع التأكيد دائماً على أن التكنولوجيا يجب أن 
+                        تخدم الإنسان، لا العكس.
+                    </p>
+                </div>
+                <div class="philosophy-card fade-in">
+                    <i class="fas fa-hands-helping philosophy-icon"></i>
+                    <h3 class="philosophy-title">التعلم والمشاركة</h3>
+                    <p class="philosophy-description">
+                        أؤمن بأن المعرفة الحقيقية تكتمل عندما تشاركها مع الآخرين. 
+                        محاضرتي ليست عن نقل المعلومات، بل عن بناء مجتمع من الصيادلة 
+                        القادرين على قيادة التغيير.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Section -->
+        <section class="journey-section">
+            <h2 class="section-title fade-in">رحلتي المهنية: تقاطع العوالم</h2>
+            
+            <div class="journey-grid">
+                <div class="journey-card fade-in">
+                    <div class="journey-header">
+                        <div class="journey-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3 class="journey-title">الأساس الصيدلاني</h3>
+                    </div>
+                    <p class="journey-description">
+                        تخرجت من <span class="highlight">الجامعة الهاشمية</span>، مما منحني فهما عميقا للمنتجات الطبية، 
+                        وآليات عملها، وتأثيرها السريري. هذا الأساس العلمي والتعاطف الإنساني 
+                        هو حجر الزاوية في رحلتي المهنية.
+                    </p>
+                </div>
+                
+                <div class="journey-card fade-in">
+                    <div class="journey-header">
+                        <div class="journey-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="journey-title">الخبرة الرقمية</h3>
+                    </div>
+                    <p class="journey-description">
+                        عملي كمشرف تسويق رقمي في <span class="highlight">مستودع أدوية ابن خلدون</span> بنى لدي شغفا بتحليل 
+                        البيانات وفهم سلوك الجمهور، وتطبيق أطر عمل استراتيجية في عالم الأدوية.
+                    </p>
+                </div>
+                
+                <div class="journey-card fade-in" style="justify-self: center;">
+                    <div class="journey-header">
+                        <div class="journey-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="journey-title">الاهتمام التقني</h3>
+                    </div>
+                    <p class="journey-description">
+                        اهتمامي الشديد بـ<span class="highlight">علم البيانات والبرمجة</span> يسمح لي بفهم كيف تعمل أدوات 
+                        الذكاء الاصطناعي وكيفية تطويعها لخدمة أهدافنا الصيدلانية بشكل فعال وآمن.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2 class="section-title fade-in">خبراتي ومهاراتي الأساسية</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-badge fade-in">
+                    <i class="fas fa-heartbeat"></i> استراتيجية الرعاية الصحية الرقمية
+                </div>
+                <div class="skill-badge fade-in">
+                    <i class="fas fa-database"></i> علم البيانات والتحليلات
+                </div>
+                <div class="skill-badge fade-in">
+                    <i class="fas fa-chart-pie"></i> ذكاء الأعمال (BI)
+                </div>
+                <div class="skill-badge fade-in">
+                    <i class="fas fa-robot"></i> تطبيقات الذكاء الاصطناعي و NLP
+                </div>
+                <div class="skill-badge fade-in">
+                    <i class="fas fa-file-medical"></i> استراتيجية المحتوى الطبي
+                </div>
+                <div class="skill-badge fade-in">
+                    <i class="fas fa-users"></i> تحليل سلوك الجمهور
+                </div>
+                <div class="skill-badge fade-in">
+                    <i class="fas fa-search"></i> أبحاث السوق والمنافسين
+                </div>
+                <div class="skill-badge fade-in">
+                    <i class="fas fa-lightbulb"></i> التفكير الاستراتيجي والنقدي
+                </div>
+            </div>
+        </section>
+
+        <!-- Why This Workshop Section -->
+        <section class="why-section">
+            <h2 class="section-title fade-in">لماذا هذه المحاضرة الآن؟</h2>
+            
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <i class="fas fa-exclamation-triangle why-icon"></i>
+                    <h3 class="why-title">لمواجهة "فوضى المعلومات"</h3>
+                    <p class="why-description">
+                        المريض يأتي بمعلومات من TikTok، الطبيب مشغول، والأدلة تتغير يومياً. 
+                        نحتاج نظاماً للتعامل مع هذه الفوضى، وهذا ما سنتعلمه معاً.
+                    </p>
+                </div>
+                
+                <div class="why-card fade-in">
+                    <i class="fas fa-cogs why-icon"></i>
+                    <h3 class="why-title">تحويل التهديد إلى أداة</h3>
+                    <p class="why-description">
+                        بدلاً من الخوف من هلوسات الذكاء الاصطناعي، سنتعلم كيف نجعله يعمل 
+                        لصالحنا، تحت قيادتنا وإشرافنا الكامل.
+                    </p>
+                </div>
+                
+                <div class="why-card fade-in">
+                    <i class="fas fa-user-shield why-icon"></i>
+                    <h3 class="why-title">إعادة تعريف قيمة الصيدلاني</h3>
+                    <p class="why-description">
+                        قيمتنا الحقيقية ليست في حفظ المعلومات، بل في القدرة على الوصول إليها، 
+                        تقييمها، وتطبيقها بحكمة وإنسانية.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title fade-in">لنبدأ رحلتنا معاً</h2>
+                <p class="cta-subtitle fade-in">
+                    محاضرتي ليست مجرد نقل للمعلومات، بل هي تجربة تفاعلية ستغير طريقة تفكيرك 
+                    في مهنة الصيدلة وتجهزك لمستقبل لا يمكننا تصوره بعد
+                </p>
+                
+                <div class="cta-buttons fade-in">
+                    <a href="Slides.html" class="cta-button cta-button-primary">
+                        <i class="fas fa-rocket"></i> ابدأ المحاضرة الآن
+                    </a>
+                    <a href="Slides.html" class="cta-button cta-button-secondary">
+                        <i class="fas fa-download"></i> حمل المواد
+                    </a>
+                </div>
+
+                <div class="contact-info fade-in">
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Jpc.jo.jpc@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/amrelnagar286</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-twitter"></i>
+                            <span>@amrelnagar286</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simplified Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Stop observing this element after it's visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Add click animation to skill badges
+            document.querySelectorAll('.skill-badge').forEach(badge => {
+                badge.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+
+            // Simplified typing effect to hero greeting
+            const heroGreeting = document.querySelector('.hero-greeting');
+            if (heroGreeting) {
+                const text = heroGreeting.textContent;
+                heroGreeting.textContent = '';
+                let index = 0;
+
+                function typeWriter() {
+                    if (index < text.length) {
+                        heroGreeting.textContent += text.charAt(index);
+                        index++;
+                        setTimeout(typeWriter, 50);
+                    }
+                }
+
+                // Start typing effect when page loads
+                setTimeout(typeWriter, 300);
+            }
+        });
+    </script>
+</body>
+</html>

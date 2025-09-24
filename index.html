@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <!-- Modified viewport to enforce fixed width -->
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>ورشة عمل: الصيدلي الذكي في عصر الذكاء الاصطناعي</title>
+    <meta name="description" content="الواجهة الرئيسية لورشة عمل الصيدلي الذكي في عصر الذكاء الاصطناعي، المقدمة من الصيدلاني عمرو النجار. وصول كامل للشرائح، والمقدمة، والموارد الإضافية.">
+    <meta name="keywords" content="صيدلة, ذكاء اصطناعي, الأردن, ورشة عمل, عمرو النجار, تعليم صيدلاني, تكنولوجيا صحية, Pharmacy, AI, Jordan, Workshop, Amr Elnagar, Pharmacy Education, HealthTech">
+    <meta name="author" content="الصيدلاني عمرو النجار">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --ai-violet: #7C3AED;
+            --ai-violet-dark: #5B21B6;
+            --text-light: #FFFFFF;
+            --text-subtle: #e2e8f0;
+            --text-highlight: #c7d2fe;
+            --accent-yellow: #FBBF24;
+            --accent-red: #F87171;
+            --accent-green: #34D399;
+            --font-family: 'IBM Plex Sans Arabic', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            background-color: #1a1a2e;
+            color: var(--text-light);
+            line-height: 1.8;
+            text-align: center;
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            padding: 50px 0;
+            min-width: 1200px; /* Enforce minimum width for the body */
+        }
+
+        .main-wrapper {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            z-index: -2;
+        }
+
+        .background-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(124, 58, 237, 0.1);
+            animation: float 30s infinite ease-in-out;
+        }
+        
+        .element:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 5%; animation-delay: 0s; }
+        .element:nth-child(2) { width: 200px; height: 200px; top: 60%; left: 80%; animation-delay: 5s; }
+        .element:nth-child(3) { width: 150px; height: 150px; top: 30%; left: 70%; animation-delay: 10s; }
+        .element:nth-child(4) { width: 250px; height: 250px; top: 70%; left: 20%; animation-delay: 15s; }
+        
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(124, 58, 237, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            width: 1100px; /* Fixed width */
+        }
+
+        .header {
+            margin-bottom: 50px;
+        }
+
+        .presentation-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 52px;
+            font-weight: 900;
+            margin: 0 0 20px 0;
+            line-height: 1.3;
+            text-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            color: var(--text-light);
+        }
+
+        .header .subtitle {
+            font-size: 22px;
+            color: var(--text-subtle);
+            margin: 0 auto;
+            font-weight: 500;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+        
+        .instructor-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            color: var(--text-light);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .instructor-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+
+        .instructor-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--ai-violet);
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 0 25px rgba(124, 58, 237, 0.6);
+            transition: transform 0.3s ease;
+        }
+        .instructor-card:hover .instructor-photo {
+            transform: scale(1.1);
+        }
+
+        .instructor-info h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+        .instructor-info .role {
+            font-size: 18px;
+            color: var(--text-subtle);
+            margin: 0 0 15px 0;
+        }
+        .instructor-info .description {
+            font-size: 16px;
+            color: var(--text-highlight);
+            max-width: 500px;
+            margin: 0 auto 25px auto;
+        }
+        .instructor-cta {
+            font-weight: 700;
+            color: var(--text-light);
+            background: var(--ai-violet);
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .instructor-card:hover .instructor-cta {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(124, 58, 237, 0.5);
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Fixed 3-column layout */
+            gap: 25px;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+        }
+        
+        .link-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .link-card .card-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .icon-intro { background: rgba(251, 191, 36, 0.2); color: var(--accent-yellow); }
+        .icon-slides { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); }
+        .icon-archive { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); }
+
+        .link-card h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+        }
+        .title-highlight {
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 20px;
+            border: 2px solid;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .link-card:hover .title-highlight {
+            background-color: rgba(255,255,255,0.1);
+        }
+        .title-yellow { border-color: var(--accent-yellow); }
+        .title-red { border-color: var(--accent-red); }
+        .title-green { border-color: var(--accent-green); }
+
+
+        .link-card p {
+            font-size: 16px;
+            color: var(--text-subtle);
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+        
+        .link-card .card-cta {
+            font-weight: 700;
+            color: var(--text-light);
+            background: var(--ai-violet-dark);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .link-card:hover .card-cta {
+            background: var(--ai-violet);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.4);
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(10px, 10px); }
+        }
+        
+        .animated {
+            animation: fadeInUp 0.8s both;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1.0s; }
+        
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="background-elements">
+            <div class="element"></div>
+            <div class="element"></div>
+            <div class="element"></div>
+            <div class="element"></div>
+        </div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="presentation-badge animated">
+                <i class="fas fa-atom"></i>
+                ورشة عمل استراتيجية
+            </div>
+            <h1 class="animated delay-1">
+                الصيدلي الذكي في عصر الذكاء الاصطناعي
+            </h1>
+            <p class="subtitle animated delay-2">
+                دستوركم لتصميم المستقبل، وقيادة التحول في مهنة الصيدلة بالأردن
+            </p>
+        </header>
+
+        <main>
+            <!-- Instructor Card -->
+            <div class="instructor-card animated delay-3">
+                <img src="Amr.jpg" alt="صورة المحاضر" class="instructor-photo">
+                <div class="instructor-info">
+                    <h2>إعداد وتقديم: الصيدلاني عمرو النجار</h2>
+                    <p class="role">صيدلاني • مستشار رقمي • مؤسس الورشة</p>
+                    <p class="description">خبير في دمج التكنولوجيا المتقدمة مع الممارسة الصيدلانية لخلق حلول مبتكرة تخدم المريض والنظام الصحي.</p>
+                    <a href="instructor.html" class="instructor-cta">اعرف المزيد عني</a>
+                </div>
+            </div>
+
+            <div class="links-grid">
+                <!-- Introduction Card -->
+                <a href="introduction.html" class="link-card animated delay-4">
+                    <div class="card-icon icon-intro"><i class="fas fa-flag-checkered"></i></div>
+                    <h2><span class="title-highlight title-yellow">مقدمة الورشة</span></h2>
+                    <p>الأساسيات والأهداف التي بنيت عليها هذه الورشة المتكاملة للصيادلة.</p>
+                    <span class="card-cta">عرض المقدمة</span>
+                </a>
+                
+                <!-- Workshop Slides Card -->
+                <a href="slides.html" class="link-card animated delay-4">
+                    <div class="card-icon icon-slides"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h2><span class="title-highlight title-red">شرائح العرض</span></h2>
+                    <p>الوصول المباشر إلى المحتوى الكامل لشرائح الورشة بتنسيق تفاعلي.</p>
+                    <span class="card-cta">تصفح الشرائح</span>
+                </a>
+                
+                <!-- Previous Workshop Card -->
+                <a href="https://amrelnagar286.github.io/jpc.jo.smrt_rsrch_wrkshp/" target="_blank" class="link-card animated delay-5">
+                    <div class="card-icon icon-archive"><i class="fas fa-archive"></i></div>
+                    <h2><span class="title-highlight title-green">ورشة البحث الذكي</span></h2>
+                    <p>استكشف محتوى وموارد ورشة العمل السابقة حول منهجيات البحث المتقدم.</p>
+                    <span class="card-cta">زيارة الورشة</span>
+                </a>
+            </div>
+        </main>
+        
+    </div>
+
+</body>
+</html>
